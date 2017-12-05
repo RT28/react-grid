@@ -1,4 +1,5 @@
 var path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -14,13 +15,22 @@ module.exports = {
         exclude: /(node_modules|bower_components|build)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
         }
+      }, {
+        test: /\.css$/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /(node_modules|bower_components|build)/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader'],
+        }),
       }
     ]
   },
+  plugins: [
+    new ExtractTextPlugin('react-grid.css'),
+  ],
+  devtool: 'source-map',
   externals: {
     'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
   }
