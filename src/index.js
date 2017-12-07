@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 import './styles.css';
 
 export default class Grid extends React.Component {
@@ -20,7 +21,9 @@ export default class Grid extends React.Component {
     const gridConfig = this.props.config;
     return (
       <div className={`grid ${gridConfig.cls}`} ref={(grid) => {this.grid = grid; }}>
-
+        <div className="grid-header" ref={(header) => {this.gridHeader = header; }}>
+          <Header {...this.props} />
+        </div>
       </div>
     );
   }
