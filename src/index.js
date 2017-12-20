@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Rows from './Rows';
 import './styles.css';
 
 export default class Grid extends React.Component {
@@ -23,6 +24,9 @@ export default class Grid extends React.Component {
       <div className={`grid ${gridConfig.cls}`} ref={(grid) => {this.grid = grid; }}>
         <div className="grid-header" ref={(header) => {this.gridHeader = header; }}>
           <Header {...this.props} />
+        </div>
+        <div className="grid-body">
+          <Rows {...this.props} />
         </div>
       </div>
     );
