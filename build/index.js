@@ -186,7 +186,6 @@ var Rows = function (_React$Component) {
     value: function renderRows() {
       var _this2 = this;
 
-      console.log(this.props.grid.flatColumns);
       var rows = this.props.config.data;
       return rows.map(function (row, rowIndex) {
         var cells = _this2.props.grid.flatColumns.map(function (cell, cellIndex) {
