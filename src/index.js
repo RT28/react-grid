@@ -8,12 +8,14 @@ export default class Grid extends React.Component {
     super(props);
     this.state = {
       flatColumns: [],
+      data: Object.assign([], this.props.config.data),
     };
   }
 
   componentWillMount() {
     this.setState({
       flatColumns: this.getFlatColumns(this.props.config.columns, []),
+      data: Object.assign([], this.props.config.data),
     });
   }
 

@@ -276,7 +276,8 @@ var Grid = function (_React$Component) {
     };
 
     _this.state = {
-      flatColumns: []
+      flatColumns: [],
+      data: Object.assign([], _this.props.config.data)
     };
     return _this;
   }
@@ -285,7 +286,8 @@ var Grid = function (_React$Component) {
     key: 'componentWillMount',
     value: function componentWillMount() {
       this.setState({
-        flatColumns: this.getFlatColumns(this.props.config.columns, [])
+        flatColumns: this.getFlatColumns(this.props.config.columns, []),
+        data: Object.assign([], this.props.config.data)
       });
     }
   }, {
