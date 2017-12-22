@@ -36,12 +36,14 @@
 .grid table {
   border-collapse: collapse;
   table-layout: fixed;
+  text-align: left;
 }
 
 .header-cell {
   background-color: #EFEFEF;
-  padding: 16px;
+  padding: 16px 0px;
   border-bottom: 1px solid #DEDEDE;
+  text-align: center;
 }
 
 .cell {

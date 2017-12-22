@@ -120,7 +120,7 @@ var Header = function (_React$Component) {
         }
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'th',
-          { className: 'header-cell ' + column.headerCls, key: index },
+          { className: 'header-cell ' + column.headerCls + ' ' + column.cls, key: index },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             null,
@@ -143,7 +143,7 @@ var Header = function (_React$Component) {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'tr',
             { className: 'header-row' },
-            this.renderColumns(this.props.config.columns, columns)
+            this.renderColumns(this.props.config.columns)
           )
         )
       );
@@ -192,7 +192,7 @@ var Rows = function (_React$Component) {
         var cells = _this2.props.grid.flatColumns.map(function (cell, cellIndex) {
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "th",
-            { className: "cell", key: "" + rowIndex + cellIndex },
+            { className: "cell " + cell.cls + " " + cell.cellCls, key: "" + rowIndex + cellIndex },
             row[cell.name]
           );
         });

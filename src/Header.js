@@ -9,7 +9,7 @@ export default class Header extends React.Component {
         subHeaders = column.columns ? this.renderColumns(column.columns, []) : null;
       }
       return (
-        <th className={`header-cell ${column.headerCls}`} key={index}>
+        <th className={`header-cell ${column.headerCls} ${column.cls}`} key={index}>
           <div>
           {column.headerRenderer ? column.headerRenderer(index, this.props.config.columns, this.props.config.data) : column.title}
           {subHeaders}
@@ -24,7 +24,7 @@ export default class Header extends React.Component {
       <table>
         <tbody>
           <tr className="header-row">
-            {this.renderColumns(this.props.config.columns, columns)}
+            {this.renderColumns(this.props.config.columns)}
           </tr>
         </tbody>
       </table>
