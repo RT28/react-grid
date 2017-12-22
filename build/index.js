@@ -192,7 +192,7 @@ var Rows = function (_React$Component) {
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "th",
             { className: "cell " + cell.cls + " " + cell.cellCls, key: "" + rowIndex + cellIndex },
-            row[cell.name]
+            cell.cellRenderer ? cell.cellRenderer(row[cell.name], row, _this2.props.config.data) : row[cell.name]
           );
         });
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
