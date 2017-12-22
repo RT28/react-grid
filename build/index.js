@@ -64,29 +64,29 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+module.exports = require("react");
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("react");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_css__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_css__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -160,101 +160,7 @@ var Header = function (_React$Component) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Rows__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_css__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-var Grid = function (_React$Component) {
-  _inherits(Grid, _React$Component);
-
-  function Grid() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, Grid);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Grid.__proto__ || Object.getPrototypeOf(Grid)).call.apply(_ref, [this].concat(args))), _this), _this.syncGridScroll = function (e) {
-      var _this2 = _this,
-          gridHeader = _this2.gridHeader;
-
-      gridHeader.style.top = _this.grid.scrollTop + 'px';
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(Grid, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var grid = this.grid;
-
-      grid.addEventListener('scroll', this.syncGridScroll);
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      this.grid.removeEventListener('scroll', this.syncGridScroll);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this3 = this;
-
-      var gridConfig = this.props.config;
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'grid ' + gridConfig.cls, ref: function ref(grid) {
-            _this3.grid = grid;
-          } },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'grid-header', ref: function ref(header) {
-              _this3.gridHeader = header;
-            } },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], this.props)
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'grid-body' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Rows__["a" /* default */], this.props)
-        )
-      );
-    }
-  }]);
-
-  return Grid;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (Grid);
-
-/***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -276,6 +182,28 @@ var Rows = function (_React$Component) {
   }
 
   _createClass(Rows, [{
+    key: "renderRows",
+    value: function renderRows() {
+      var _this2 = this;
+
+      console.log(this.props.grid.flatColumns);
+      var rows = this.props.config.data;
+      return rows.map(function (row, rowIndex) {
+        var cells = _this2.props.grid.flatColumns.map(function (cell, cellIndex) {
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "th",
+            { className: "cell", key: "" + rowIndex + cellIndex },
+            row[cell.name]
+          );
+        });
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "tr",
+          { className: "grid-row", key: rowIndex },
+          cells
+        );
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -284,630 +212,7 @@ var Rows = function (_React$Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "tbody",
           null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "tr",
-            { className: "grid-row" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.1"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.2"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 3.3"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 4"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "th",
-              { className: "cell" },
-              "Column 5"
-            )
-          )
+          this.renderRows()
         )
       );
     }
@@ -917,6 +222,116 @@ var Rows = function (_React$Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["a"] = (Rows);
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Rows__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_css__);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var Grid = function (_React$Component) {
+  _inherits(Grid, _React$Component);
+
+  function Grid(props) {
+    _classCallCheck(this, Grid);
+
+    var _this = _possibleConstructorReturn(this, (Grid.__proto__ || Object.getPrototypeOf(Grid)).call(this, props));
+
+    _this.getFlatColumns = function (cols, columns) {
+      // calculate all flat columns, i.e leaf columns or the ones that do not contain any subheaders
+      for (var index = 0; index < cols.length; index += 1) {
+        if (cols[index].columns && cols[index].columns.length > 0) {
+          _this.getFlatColumns(cols[index].columns, columns);
+        } else {
+          columns.push(cols[index]);
+        }
+      }
+      return columns;
+    };
+
+    _this.syncGridScroll = function (e) {
+      var gridHeader = _this.gridHeader;
+
+      gridHeader.style.top = _this.grid.scrollTop + 'px';
+    };
+
+    _this.state = {
+      flatColumns: []
+    };
+    return _this;
+  }
+
+  _createClass(Grid, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.setState({
+        flatColumns: this.getFlatColumns(this.props.config.columns, [])
+      });
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var grid = this.grid;
+
+      grid.addEventListener('scroll', this.syncGridScroll);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.grid.removeEventListener('scroll', this.syncGridScroll);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var gridConfig = this.props.config;
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'grid ' + gridConfig.cls, ref: function ref(grid) {
+            _this2.grid = grid;
+          } },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'grid-header', ref: function ref(header) {
+              _this2.gridHeader = header;
+            } },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], _extends({}, this.props, { grid: this.state }))
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'grid-body' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Rows__["a" /* default */], _extends({}, this.props, { grid: this.state }))
+        )
+      );
+    }
+  }]);
+
+  return Grid;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Grid);
 
 /***/ })
 /******/ ]);

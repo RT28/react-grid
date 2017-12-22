@@ -1,154 +1,24 @@
 import React from 'react';
 
 export default class Rows extends React.Component {
+  renderRows() {
+    console.log(this.props.grid.flatColumns);
+    const rows = this.props.config.data;
+    return rows.map((row, rowIndex) => {
+      const cells = this.props.grid.flatColumns.map((cell, cellIndex) => <th className="cell" key={`${rowIndex}${cellIndex}`}>{row[cell.name]}</th>);
+      return (
+        <tr className="grid-row" key={rowIndex}>
+          {cells}
+        </tr>
+      );
+    });
+  }
+
   render() {
     return (
       <table>
         <tbody>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
-          <tr className="grid-row">
-            <th className="cell">Column 1</th>
-            <th className="cell">Column 2</th>
-            <th className="cell">Column 3.1</th>
-            <th className="cell">Column 3.2</th>
-            <th className="cell">Column 3.3</th>
-            <th className="cell">Column 4</th>
-            <th className="cell">Column 5</th>
-          </tr>
+          {this.renderRows()}
         </tbody>
       </table>
     );
