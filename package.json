@@ -21,7 +21,8 @@
     "build": "webpack",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern build/",
-    "lint:js": "npm run lint:eslint -- . "
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:staged": "lint-staged",
   },
   "lint-staged": {
     "*.js": "lint:eslint"
@@ -89,6 +90,7 @@
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "7.5.1",
     "extract-text-webpack-plugin": "2.1.0",
+    "pre-commit": "1.2.2",
     "style-loader": "0.13.1",
     "webpack": "2.3.3"
   }
