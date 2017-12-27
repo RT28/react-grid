@@ -11,13 +11,14 @@ export default class Header extends React.Component {
       return (
         <th className={`header-cell ${column.headerCls} ${column.cls}`} key={index}>
           <div>
-          {column.headerRenderer ? column.headerRenderer(index, this.props.config.columns, this.props.config.data) : column.title}
-          {subHeaders}
+            {column.headerRenderer ? column.headerRenderer(index, this.props.config.columns, this.props.config.data) : column.title}
+            {subHeaders}
           </div>
         </th>
       );
     });
   }
+
   render() {
     const columns = [];
     return (
