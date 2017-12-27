@@ -19,6 +19,15 @@ export default class Grid extends React.Component {
     });
   }
 
+  componentDidMount() {
+    const { grid } = this;
+    grid.addEventListener('scroll', this.syncGridScroll);
+  }
+
+  componentWillUnmount() {
+    this.grid.removeEventListener('scroll', this.syncGridScroll);
+  }
+
   getFlatColumns = (cols, columns) => {
     // calculate all flat columns, i.e leaf columns or the ones that do not contain any subheaders
     for (let index = 0; index < cols.length; index += 1) {
@@ -31,16 +40,8 @@ export default class Grid extends React.Component {
     return columns;
   }
 
-  componentDidMount() {
-    const { grid } = this;
-    grid.addEventListener('scroll', this.syncGridScroll);
-  }
-
-  componentWillUnmount() {
-    this.grid.removeEventListener('scroll', this.syncGridScroll);
-  }
-
   syncGridScroll = (e) => {
+    e.stopPropagation();
     const { gridHeader } = this;
     gridHeader.style.top = `${this.grid.scrollTop}px`;
   }
@@ -48,8 +49,8 @@ export default class Grid extends React.Component {
   render() {
     const gridConfig = this.props.config;
     return (
-      <div className={`grid ${gridConfig.cls}`} ref={(grid) => {this.grid = grid; }}>
-        <div className="grid-header" ref={(header) => {this.gridHeader = header; }}>
+      <div className={`grid ${gridConfig.cls}`} ref={(grid) => { this.grid = grid; }}>
+        <div className="grid-header" ref={(header) => { this.gridHeader = header; }}>
           <Header {...this.props} grid={this.state} />
         </div>
         <div className="grid-body">

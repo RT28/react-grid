@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 
 export default class Header extends React.Component {
-  renderColumns(columns, columnTemplate) {
+  renderColumns(columns) {
     return columns.map((column, index) => {
       let subHeaders;
       if (column.columns && column.columns.length > 0) {
@@ -20,7 +20,6 @@ export default class Header extends React.Component {
   }
 
   render() {
-    const columns = [];
     return (
       <table>
         <tbody>
